@@ -1,16 +1,39 @@
-# React + Vite
+<h1 align="center">learn-aws-amplify</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <b>A simple React static site used to learn AWS Amplify hosting &amp; deployment.</b>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/AWS%20Amplify-FF9900?style=flat-square&logo=awsamplify&logoColor=white" alt="AWS Amplify">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A minimal React + Vite static website (`staticwebsite`) built as a hands-on exercise for learning **AWS Amplify** — connecting a Git repo to Amplify, configuring the build, and getting continuous deployment of a static front-end on AWS.
 
-## Expanding the ESLint configuration
+The app itself is intentionally simple; the point of the project is the **hosting workflow**, not the UI.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19 + Vite
+- ESLint
+
+## Getting Started
+
+```bash
+npm install
+npm run dev        # local dev server
+npm run build      # production build to dist/
+```
+
+## Deploying with AWS Amplify
+
+1. Push this repo to GitHub.
+2. In the AWS Amplify console, **Host web app** → connect this repository.
+3. Amplify auto-detects Vite; the build command is `npm run build` and the output directory is `dist`.
+4. Amplify builds and deploys on every push, serving the site from its CDN.
